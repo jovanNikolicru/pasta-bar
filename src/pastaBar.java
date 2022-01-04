@@ -13,12 +13,12 @@ public class pastaBar {
 		int[] price = { 50, 60, 120, 120, 140, 100, 100, 100, 80, 50, 80, 80, 80, 50, 50, 20 };
 		int totalPrice=0;
 		int totalPriceDiscount=0;
-		System.out.println("**********Dobrodosli u Pasta Bar Izvolite!!**********");
-		System.out.println("*****************************************************");
-		System.out.println("***********Sami birate svoju idealnu pastu***********");
-		System.out.println("*****************************************************");
-		System.out.println("******Kada odaberete sastojke kucajte--Poruci--******");
-		System.out.println("*****************************************************");
+		System.out.println("***************Dobrodosli u Pasta Bar Izvolite!!*****************");
+		System.out.println("*****************************************************************");
+		System.out.println("*****************Sami birate svoju idealnu pastu*****************");
+		System.out.println("*****************************************************************");
+		System.out.println("************Kada odaberete sastojke kucajte--Poruci--************");
+		System.out.println("*****************************************************************");
 		String customerIngredient = "";
 		
 	
@@ -26,8 +26,8 @@ public class pastaBar {
 			System.out.println("Izaberite sastojak");
 			customerIngredient=s.nextLine();
 			
-			System.out.println("*****************************************************");
-			
+		System.out.println("=================================================================");
+		
 			for(int i=0;i<price.length;i++) {
 				if (i==chosenIngredients(ingredients, customerIngredient)) {
 					totalPrice=totalPrice+price[i];
@@ -36,13 +36,13 @@ public class pastaBar {
 			}
 
 		}if (customerIngredient.equals("poruci")) {
-			System.out.println(">>>>>>>>>>>>Vasa porudzbina je zabelezena<<<<<<<<<<<<<");
+			System.out.println(">>>>>>>>>>>>>>>>>>Vasa porudzbina je zabelezena<<<<<<<<<<<<<<<<<<");
 			System.out.println("Cena je " + totalPrice + " rsd");
-			System.out.println("******************************************************");
+			System.out.println("*****************************************************************");
 			
 		}System.out.println("Unesite broj telefona");
 		String phoneNumber=s.next();
-			System.out.println("******************************************************");
+			System.out.println("*****************************************************************");
 			if(isRegularCustomer(regularCustomers, phoneNumber)==true) {
 				totalPriceDiscount=totalPrice-(totalPrice*10/100);
 				System.out.println("Kao redovna musterija ostavrujete popust 10%");
@@ -50,8 +50,15 @@ public class pastaBar {
 			}else {
 			System.out.println("Postanite nasa redovna musterija i ostvaricete popust od 10%");
 			}
-			System.out.println("*****************************************************");
-			System.out.println("******************Hvala Vam na poseti****************");
+			System.out.println("=================================================================");
+			System.out.println("************************Hvala Vam na poseti**********************");
+			System.out.println("=================================================================");
+			System.out.println();
+			System.out.println("      **** ****   *  ****     *     ******* *     *   **   ");
+			System.out.println("      *  * *   *  *     *    * *       *    *     *  *  *  ");
+			System.out.println("      **** ****   *     *   *   *      *    * *   *  *  *  ");
+			System.out.println("      *    * *    *  *  *  * * * *     *    *   * *  *  *  ");
+			System.out.println("      *    *   *  *   **  *       *    *    *     *   **   ");
 	}
 
 	public static int chosenIngredients(String[] ingredients, String customerIngredient) {
