@@ -26,4 +26,15 @@ public class pastaBar {
 		return noOfIngredients;
 
 	}
+
+	public static boolean isRegularCustomer(String[] regularCustomers, String phoneNumber) {
+		int i;
+		for (i = 0; i < regularCustomers.length; i++) {
+			if (regularCustomers[i].equalsIgnoreCase(phoneNumber)) {
+				return true;
+			}
+
+		}
+		return false;
+	}
 }
